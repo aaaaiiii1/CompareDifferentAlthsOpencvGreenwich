@@ -34,7 +34,7 @@ for (x, y, w, h) in faces:                                  # Frames  LOCATION X
     Face = cv2.resize((gray[y: y+h, x: x+w]), (110, 110))   # The Face is isolated and cropped
 
     ID, conf = LBPH.predict(Face)                           # LBPH RECOGNITION
-    print ID
+    print(ID)
     NAME = NameFind.ID2Name(ID, conf)
     NameFind.DispID(x, y, w, h, NAME, gray)
 
