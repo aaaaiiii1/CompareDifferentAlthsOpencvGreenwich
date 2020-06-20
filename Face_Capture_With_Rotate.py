@@ -37,6 +37,6 @@ while Count < 50:
     cv2.imshow('Face Recognition System Capture Faces', gray)                                       # Show the video
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-print 'FACE CAPTURE FOR THE SUBJECT IS COMPLETE'
+print('FACE CAPTURE FOR THE SUBJECT IS COMPLETE')
 cap.release()
 cv2.destroyAllWindows()

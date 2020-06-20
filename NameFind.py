@@ -39,7 +39,7 @@ def ID2Name(ID, conf):
 
 
 def AddName():
-    Name = raw_input('Enter Your Name ')
+    Name = input('Enter Your Name ')
     Info = open("Names.txt", "r+")
     ID = ((sum(1 for line in Info))+1)
     Info.write(str(ID) + "," + Name + "\n")
@@ -149,7 +149,7 @@ def DetectEyes(Image):
 
             if (DX != 0.0) and (DY != 0.0):                                                 # Make sure the the change happens only if there is an angle
                 Theta = math.degrees(math.atan(round(float(DY) / float(DX), 2)))            # Find the Angle
-                print "Theta  " + str(Theta)
+                print("Theta  " + str(Theta))
 
                 M = cv2.getRotationMatrix2D((cols / 2, rows / 2), Theta, 1)                 # Find the Rotation Matrix
                 Image = cv2.warpAffine(Image, M, (cols, rows))
@@ -162,4 +162,4 @@ def DetectEyes(Image):
 
 
 def tell_time_passed():
-    print 'TIME PASSED ' + str(round(((time.clock() - now_time)/60), 2)) + ' MINS'
+    print('TIME PASSED ' + str(round(((time.clock() - now_time)/60), 2)) + ' MINS')

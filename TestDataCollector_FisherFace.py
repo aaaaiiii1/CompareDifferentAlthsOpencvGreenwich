@@ -56,7 +56,7 @@ for (x, y, w, h) in faces:
         fish_ID.append(ID)
         fish_conf.append(conf)
         Info.write(str(ID) + "," + str(conf) + "\n")
-        print 'FOR ' + str(Lev) + ' COMPONENTS ID: ' + str(ID) + ' CONFIDENT: ' + str(conf)
+        print('FOR ' + str(Lev) + ' COMPONENTS ID: ' + str(ID) + ' CONFIDENT: ' + str(conf))
         Lev = Lev + 1
 
     fig = plt.gcf()
@@ -75,7 +75,7 @@ for (x, y, w, h) in faces:
     plt.ylabel('Confidence', fontsize=8)
     plt.xlabel('Number of Components', fontsize=8)
     plt.tight_layout()
-    print ' SHOW RESULTS FOR FACE ' + str(face_number)
+    print(' SHOW RESULTS FOR FACE ' + str(face_number))
     NameFind.tell_time_passed()
     cv2.imshow('FACE' + str(face_number), Face)
     plt.show()
